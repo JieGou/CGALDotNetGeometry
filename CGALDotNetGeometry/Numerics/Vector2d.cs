@@ -410,6 +410,15 @@ namespace CGALDotNetGeometry.Numerics
         {
             return new Vector2d(v.x, v.y);
         }
+        /// <summary>
+        /// Cast from Vector2f to Vector2f.
+        /// </summary>
+        /// <param name="v"></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator Vector2d(Point2d v)
+        {
+            return new Vector2d(v.x, v.y);
+        }
 
         /// <summary>
         /// Are these vectors equal.

@@ -428,6 +428,7 @@ namespace CGALDotNetGeometry.Numerics
         {
             return new Vector3d(v.x, v.y, v.z);
         }
+        public static explicit operator Vector3d(Point3d v) => new Vector3d(v.x, v.y, v.z);
 
         /// <summary>
         /// Are these vectors equal.

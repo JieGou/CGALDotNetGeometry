@@ -417,11 +417,20 @@ namespace CGALDotNetGeometry.Numerics
         }
 
         /// <summary>
-        /// Cast from Point43f to Point3d.
+        /// Cast from Point3f to Point3d.
         /// </summary>
         /// <param name="v"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator Point3d(Point3f v)
+        {
+            return new Point3d(v.x, v.y, v.z);
+        }
+        /// <summary>
+        /// Cast from Vector3d to Point3d.
+        /// </summary>
+        /// <param name="v"></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static implicit operator Point3d(Vector3d v)
         {
             return new Point3d(v.x, v.y, v.z);
         }
